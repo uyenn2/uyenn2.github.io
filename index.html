@@ -1,48 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <title>Uyen Nguyen</title>  
+  <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is our example webpage.</title>
-    <script src="https://cdn.jsdelivr.net/npm/vega@5.25.0/build/vega.min.js" integrity="sha256-na2uPt+tUPV7GRVpc+/ezQj+lGwljIvOJifkmg8f3as=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.15.0/build/vega-lite.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.22.2/build/vega-embed.min.js" integrity="sha256-GfFZ6w7V/y3Ws9eHVsOXZ/F1ZFroThVZraOAx3HAt6s=" crossorigin="anonymous"></script>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  }
+</style>    
 </head>
-<title>Uyen's Page</title>
 <body>
-    <p>
-        This is an example paragraph!
-    </p>
-    <div id = "viz"></div>
-    <script>
-        var vlSpec = {
-          "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-          "data":{"url":"https://vega.github.io/editor/data/movies.json"},
-          "params": [{"name": "myfirstparam", "select":"interval"}],
-          "hconcat":
-          [
-            {
-              "mark":"bar",
-              "encoding": 
-              {
-                "x":{"field": "IMDB Rating", "type": "quantitative", "bin":"true"},
-                "y":{"aggregate":"mean", "field":"US Gross"}
-              }
-            },
-            {
-              "mark":"point",
-              "encoding": {
-                "x":{"field": "US Gross", "type": "quantitative"},
-                "y":{"field":"Worldwide Gross", "type": "quantitative"},
-                "color":{
-                  "value":"grey",
-                  "condition": {"param": "myfirstparam"}
-                }
-              } 
-            }
-          ]
-        }
-      vegaEmbed ("#viz", vlSpec);
-    </script>
+  <div class="header">
+    <h1>hi, i'm Uyen</h1>
+    <p>A website created by me.</p>
+  </div>
+  
+  .header {
+    padding: 80px; /* some padding */
+    text-align: center; /* center the text */
+    background: #1abc9c; /* green background */
+    color: white; /* white text color */
+  }
+  
+  /* Increase the font size of the <h1> element */
+  .header h1 {
+    font-size: 40px;
+  }
 </body>
 </html>
