@@ -21,7 +21,7 @@
     <p>This is a page to display my projects</p>
     <div id = "viz"></div>
     <script>
-        var vlSpec = {
+        var vlSpec = 
             {
                 "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
                 "data": {"url": "https://raw.githubusercontent.com/UIUC-iSchool-DataViz/fall2023-acg-acu/main/data/building_inventory.csv"},
@@ -35,12 +35,11 @@
                           "y": {"aggregate": "sum", "field": "Square Footage"},
                           "color": {"value": "grey"}
                         }
-                      }
+                      } 
                     ]
                   }
                 ]
-              }
-        }
+            }
     vegaEmbed ("#viz", vlSpec);
     </script>    
 </body>
